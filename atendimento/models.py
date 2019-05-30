@@ -6,3 +6,9 @@ class Paciente(models.Model):
     dt_nasc = models.DateField()
     cpf = models.CharField(max_length=11)
     sexo = models.CharField(max_length=1)
+
+class Medico(models.Model):
+    nome = models.CharField(max_length=50)
+    crm = models.CharField(max_length=5)
+    espcialidade = models.CharField(max_length=20)
+    idade = models.IntegerField()
