@@ -8,6 +8,7 @@
                 <th>CRM</th>
                 <th>Especialidade</th>
                 <th>Idade</th>
+                <th>Link</th>
             </tr>
         </thead>
         <tbody>
@@ -15,8 +16,10 @@
                 <tr>
                     <td>{{medico.id}}</td>
                     <td>{{medico.nome}}</td>
+                    <td>{{medico.crm}}</td>
                     <td>{{medico.espcialidade}}</td>
                     <td>{{medico.idade}}</td>
+                    <td><a href="http://127.0.0.1:8000/atendimento/medico/{{medico.id}}">Ver</a></td>
                 </tr>
             {% endfor %}
         </tbody>

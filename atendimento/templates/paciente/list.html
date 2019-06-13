@@ -8,6 +8,7 @@
             <th>Dt Nasc</th>
             <th>CPF</th>
             <th>Sexo</th>
+            <th>Link</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,7 @@
                 <td>{{paciente.dt_nasc}}</td>
                 <td>{{paciente.cpf}}</td>
                 <td>{{paciente.sexo}}</td>
+                <td><a href="http://127.0.0.1:8000/atendimento/paciente/{{paciente.id}}/">Ver</a></td>
             </tr>
         {% endfor %}
     </tbody>

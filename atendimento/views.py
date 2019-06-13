@@ -8,17 +8,21 @@ def paciente_list(request):
     pacientes = Paciente.objects.all()
     return render (request, 'paciente/list.html', {'pacientes': pacientes})
 
-def paciente_show(request, id):
-    return render (request, 'paciente/show.html', {'id': id})
+def paciente_show(request, paciente_id):
+    paciente = Paciente.objects.get(id=paciente_id)
+    return render (request, 'paciente/show.html', {'paciente': paciente})
 
 def medico_list(request):
     medicos = Medico.objects.all()
     return render (request, 'medico/list.html', {'medicos': medicos})
 
-def medico_show(request, id):
-    return render (request, 'medico/show.html', {'id': id})
+def medico_show(request, medico_id):
+    medico = Medico.objects.get(id=medico_id)
+    return render (request, 'medico/show.html', {'medico': medico})
+    
 
 def agendamento_list(request):
+    
     return render (request, 'agendamento/list.html')
 
 def medicamento_list(request):
